@@ -535,6 +535,7 @@ void Ekf::controlGpsFusion()
 					if (resetGpsAntYaw()) {
 						_control_status.flags.yaw_align = true;
 						startGpsYawFusion();
+						_time_last_gps_yaw_fuse = _time_last_imu;
 					}
 				}
 
